@@ -146,6 +146,14 @@ export function ContextUsageRing({
           </div>
 
           <div className="mt-2 space-y-0.5">
+            {usage.history_tokens != null && usage.history_tokens > 0 && (
+              <div className="flex items-center justify-between text-[10px]">
+                <span className="text-muted-foreground">History</span>
+                <span className="tabular-nums">
+                  {formatTokens(usage.history_tokens)}
+                </span>
+              </div>
+            )}
             <div className="flex items-center justify-between text-[10px]">
               <span className="text-muted-foreground">{t("chat.contextCompressAt")}</span>
               <span className="tabular-nums">

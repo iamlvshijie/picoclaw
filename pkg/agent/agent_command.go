@@ -352,6 +352,7 @@ func (al *AgentLoop) buildCommandsRuntime(
 			return &commands.ContextStats{
 				UsedTokens:        usage.UsedTokens,
 				TotalTokens:       usage.TotalTokens,
+				HistoryTokens:     usage.HistoryTokens,
 				CompressAtTokens:  usage.CompressAtTokens,
 				SummarizeAtTokens: usage.SummarizeAtTokens,
 				UsedPercent:       usage.UsedPercent,
